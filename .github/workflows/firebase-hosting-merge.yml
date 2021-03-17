@@ -21,7 +21,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repo
         uses: actions/checkout@master
-
+    
+      - name: Remove node_modules
+        run: rm -rf node_modules
+        
       - name: Install dependencies
         run: npm install
 
