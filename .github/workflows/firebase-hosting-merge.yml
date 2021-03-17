@@ -26,7 +26,7 @@ jobs:
         run: rm -rf node_modules
         
       - name: Install dependencies
-        run: npm i core-js@2 && npm install
+        run: npm install --save
 
       - name: Build
         run: npm run build
