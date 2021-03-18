@@ -22,14 +22,14 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@master
     
-    #  - name: Remove node_modules
-    #    run: rm -rf node_modules
+      - name: Remove node_modules
+        run: rm -rf node_modules
         
       - name: Install dependencies
-        run: npm install --save
+        run: npm i @vue/cli-service && npm install --save
 
       - name: Build
-        run: sudo run build
+        run: npm run build
 
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
